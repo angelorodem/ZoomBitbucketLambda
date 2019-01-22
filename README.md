@@ -17,7 +17,7 @@ To use this code to integrate Zoom Meetings and Bitbucket, you need to do the fo
 
 **API Gateway**
 
- - As default, aws creates a ANY resource, delete it and create a POST resource
+ - As default aws creates a ANY resource, delete it and create a POST resource
  - Create the POST resource as as a lambda function
  - By default API Gateways don't forward request Headers, so you have to modify the Integration request as explained [Here](https://aws.amazon.com/premiumsupport/knowledge-center/custom-headers-api-gateway-lambda/) 
 
