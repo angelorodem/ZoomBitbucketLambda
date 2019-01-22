@@ -1,5 +1,5 @@
 
-# ZoomBitbucketLambda
+# Integrating Zoom Meetings with Bitbucket using Python and AWS Lambda
 This is a example of integration of Zoom Incoming webhooks with bitbucket webhooks on a AWS Lambda
 
 To use this code to integrate Zoom Meetings and Bitbucket, you need to do the following:
