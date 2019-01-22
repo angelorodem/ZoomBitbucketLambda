@@ -21,3 +21,9 @@ To use this code to integrate Zoom Meetings and Bitbucket, you need to do the fo
  - Create the POST resource as as a lambda function
  - By default API Gateways don't forward request Headers, so you have to modify the Integration request as explained [Here](https://aws.amazon.com/premiumsupport/knowledge-center/custom-headers-api-gateway-lambda/) 
 
+**BitBucket**
+- Go to the **repo** settings and click webhooks
+- Add a new webhook with the following custom triggers in the **Pull request** section: *Created*, *Approved*, *Merged*, *Comment created*
+- Add the AWS API Gateway link  to the bitbucket weebhook url
+
+that should be it
