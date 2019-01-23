@@ -27,3 +27,14 @@ To use this code to integrate Zoom Meetings and Bitbucket, you need to do the fo
 - Add the AWS API Gateway link  to the bitbucket weebhook url
 
 that should be it
+
+
+Note, if using encripted enviroment variables you may need change a few things, like adding a code to decript using the kms
+
+
+    WEBHOOK_URL_ENC = os.environ['ZOOM_INCOMING_WH_URL']
+    WEBHOOK_URL_DEC = boto3.client('kms').decrypt(CiphertextBlob=b64decode(WEBHOOK_URL_ENC))['Plaintext'].decode()
+    
+    ZOOM_KEY_ENC = os.environ['ZOOM_INCOMING_WH_PW']
+    ZOOM_KEY_DEC = boto3.client('kms').decrypt(CiphertextBlob=b64decode(ZOOM_KEY_ENC))['Plaintext'].decode() # bytes to str
+
