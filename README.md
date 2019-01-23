@@ -11,14 +11,14 @@ To use this code to integrate Zoom Meetings and Bitbucket, you need to do the fo
  
 **AWS**
  - Create a lambda function (see aws tutorials for better explanation)
- - You may need to create a role
+ - You may need to create a role (Full lambda, KMS (if using encripted enviroment variables), and full S3, if storing logs and code there)
  - Use a API Gateway as the trigger
  - Put the code of this repo in the lambda
  - Configure enviroment variables as explained in the code (create enviroment variables with the zoom webhooks URL/Key)
 
 **API Gateway**
- - As default aws creates a ANY resource, delete it and create a POST resource
- - Create the POST resource as as a lambda function
+ - As default aws creates a ANY resource when adding a trigger to a lambda, delete it and create a POST resource
+ - Create the POST resource as a lambda function
  - By default API Gateways don't forward request Headers, so you have to modify the Integration request as explained [Here](https://aws.amazon.com/premiumsupport/knowledge-center/custom-headers-api-gateway-lambda/) 
 
 **BitBucket**
