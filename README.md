@@ -6,7 +6,7 @@ To use this code to integrate Zoom Meetings and Bitbucket, you need to do the fo
 
 **Zoom**
  - Go to zoom, and click settings, then click on enable advanced features
- - Next, click on messaging addons and create a incoming weebhooks
+ - Next, click on messaging addons and create an incoming weebhook
  - When finished, you'll have a endpoint URL and a key
  
 **AWS**
